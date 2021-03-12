@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, FC} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {
   StyleSheet,
@@ -14,7 +14,7 @@ import {putPosts} from '../store/actions';
 import {Loader} from '../components/Loader';
 import {getPosts} from '../store/api';
 
-export const PostsList = ({navigation}: PostsListTypeProps) => {
+export const PostsList: FC<PostsListTypeProps> = ({navigation}) => {
   const dispatch = useDispatch();
   const posts = useSelector((state: PostsReducerType) => state.posts);
 

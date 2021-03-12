@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, ReactElement} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {
   StyleSheet,
@@ -22,7 +22,10 @@ import {
 } from '../constants/types';
 import {Loader} from '../components/Loader';
 
-export const PostsItem = ({navigation, route}: PostsItemTypeProps) => {
+export const PostsItem = ({
+  navigation,
+  route,
+}: PostsItemTypeProps): ReactElement => {
   const dispatch = useDispatch();
   const {id, userId} = route.params;
 
