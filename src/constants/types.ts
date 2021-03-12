@@ -1,6 +1,6 @@
 export type RootParamList = {
-  POSTS_LIST: undefined;
-  POSTS_ITEM: {id: string | number; userId: string | number};
+  PostsList: undefined;
+  PostsItem: {id: string | number; userId: string | number};
 };
 
 export type POST = {

@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {
   StyleSheet,
@@ -22,10 +22,7 @@ import {
 } from '../constants/types';
 import {Loader} from '../components/Loader';
 
-export const PostsItem: FunctionComponent<PostsItemInterface> = ({
-  navigation,
-  route,
-}) => {
+export const PostsItem = ({navigation, route}: PostsItemTypeProps) => {
   const dispatch = useDispatch();
   const {id, userId} = route.params;
 
@@ -80,10 +77,10 @@ export const PostsItem: FunctionComponent<PostsItemInterface> = ({
   );
 };
 
-interface PostsItemInterface {
+type PostsItemTypeProps = {
   navigation: StackNavigationProp<RootParamList, 'PostsItem'>;
   route: RouteProp<RootParamList, 'PostsItem'>;
-}
+};
 
 const styles = StyleSheet.create({
   wrapperInfo: {

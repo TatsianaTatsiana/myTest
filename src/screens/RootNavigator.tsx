@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {RootParamList} from '../constants/types';
 import {PostsList} from '../screens/PostsList';
 import {PostsItem} from '../screens/PostsItem';
 import {POSTS_LIST, POSTS_ITEM} from '../constants/route';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootParamList>();
 
 export const RootNavigator = () => {
   return (
